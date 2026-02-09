@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Eco-Friendly Shopping Assistant",
+  "version": "2.0",
+  "description": "Analyze product sustainability on Amazon, Flipkart & Myntra, show eco-friendly alternatives, carbon footprint, and a persistent cart.",
+  "permissions": ["activeTab", "storage", "scripting"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Eco Shopping"
+  }
+}
+
