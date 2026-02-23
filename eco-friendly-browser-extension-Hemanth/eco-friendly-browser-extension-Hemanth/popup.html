@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Eco Shopping</title>
+    <style>
+      body {
+        font-family: 'Inter', Arial, sans-serif;
+        padding: 14px;
+        width: 270px;
+        text-align: center;
+        background: #ffffff;
+        color: #111;
+      }
+      h2 {
+        color: #000;
+        margin: 0 0 10px 0;
+      }
+      #scan {
+        background-color: #2e7d32;
+        color: white;
+        border: none;
+        padding: 10px 14px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: all 0.2s ease;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      }
+      #scan:active {
+        transform: scale(0.95);
+        background-color: #256428;
+      }
+      #cartList {
+        list-style: none;
+        padding: 0;
+        text-align: left;
+        margin-top: 10px;
+      }
+      .cart-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 8px;
+        font-size: 13px;
+        background: #fafafa;
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 6px 8px;
+      }
+      .cart-item a {
+        flex: 1;
+        color: #000;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      .delBtn {
+        background: #e0e0e0;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 13px;
+        padding: 4px 6px;
+      }
+      .delBtn:hover {
+        background: #ccc;
+      }
+      hr {
+        border: none;
+        height: 1px;
+        background: #ddd;
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>🌿 Eco Shopping</h2>
+    <p>Scan your product page</p>
+    <!-- <button id="scan">Scan Product</button> -->
+    
+    <!-- Existing -->
+<button id="scan" style="background-color:#2e7d32; color:white; border:none; padding:10px 14px; border-radius:8px; cursor:pointer; font-size:14px; transition:all 0.2s ease; box-shadow:0 2px 6px rgba(0,0,0,0.15); margin-bottom:10px;">Scan Product</button>
+
+    <p id="status"></p>
+    <hr />
+    <h3>🛒 My Cart</h3>
+    <ul id="cartList"></ul>
+    <hr />
+
+<!-- Quick Features shown always -->
+<div id="ecoFeaturesArea" style="margin-top:18px;">
+  <div style="font-size:13px; color:#2e7d32; margin-bottom:6px; text-align:center;">Quick Eco Features</div>
+  <div style="display: flex; gap: 7px; justify-content: center; margin-bottom: 8px;">
+    <button id="searchBtn" style="background-color:#2e7d32; color:white; border:none; padding:10px 14px; border-radius:8px; cursor:pointer; font-size:14px; box-shadow:0 2px 6px rgba(0,0,0,0.08);">Search</button>
+    <button id="compareBtn" style="background-color:#2e7d32; color:white; border:none; padding:10px 14px; border-radius:8px; cursor:pointer; font-size:14px; box-shadow:0 2px 6px rgba(0,0,0,0.08);">Compare</button>
+    <button id="infoBtn" style="background-color:#2e7d32; color:white; border:none; padding:10px 14px; border-radius:8px; cursor:pointer; font-size:14px; box-shadow:0 2px 6px rgba(0,0,0,0.08);">Info</button>
+  </div>
+  <!-- Panel for dynamic feature content will be injected here -->
+  <div id="ecoFeaturePanel"></div>
+</div>
+
+
+
+    <script src="popup.js"></script>
+  </body>
+</html>
